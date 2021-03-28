@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stockUp</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+
+	<style type="text/css">
+		.img-container{
+			max-width: 600px;
+		}
+
+		img{
+			width: 100%
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="nav-wrapper">
+
+		<!-- Link around dots-wrapper added after tutorial video -->
+		<a href="index.html">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a href="index.html#contact">Contact</a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<br>
+
+		<div class="img-container">
+			<img src="images/grocery2.jpeg">
+		</div>
+		
+		<h3>Ecommerce website - stockUp</h3>
+
+		<p>This is an academic project for a web developing course. It is being done by my friends and I currently. You can view the
+            progress of this project on my GitHub page. 
+		<br>
+		<br>
+        stockUp is an e-commerce website that provides monthly subscription services for their grocery shopping and delivery service. 
+		As working professionals and students often are not experienced in cooking their meals, recommending and selling pre-packaged ingredients 
+		attached with an online recipe will increase the company’s sales volume and also solve a common dilemma faced by customers about their 
+		cravings. This website is capable of recommending products based on their declared particulars and their transactions history. In order 
+		to compete with the E-commerce giants like Walmart and Amazon, providing personalized shopping experience will allow stockUp to distinguish itself 
+		from a myriad of competitors. Creating an immersive virtual shopping experience is essential in acquiring and retaining customers 
+         (Shakesby, 2020), and which in turns lead to sustainable revenue growth. Furthermore, there is also a huge potential 
+         for upselling and recommending products. Using NLP-driven chatbot will enhance customer’s shopping experience by providing 
+         real-time assistance to the customers. Additionally, the data from the conversations can be used to improve and optimize our
+          services and products to our customers. For the administrator interface, the website will provide an analytic tool that 
+          will process our product sales and visualize using a graphical dashboard to show the product trends on specific 
+          geographical regions and sales performance on a monthly basis. These visualizations will aid us in our decision making 
+          process in targeting food advertisements to specific regions of a city at a specific time.
+		<br>
+		<br>
+		Front-end Functionality: 
+		<br>
+		The Bootstrap framework will be used as the base to build a responsive front-end interface that is portable to 
+		different devices (desktops, laptops, tablets, mobile phones). The front-end structure is divided into 2 sections: 
+		customer interface and admin interface. For the customer interface, we will provide a catalogue page, an account page,
+		 and a payment page. The catalogue page will be updated and displayed the correct quantities and products in real-time. 
+		 The account page will allow users to sign up/sign in and update/add their contact information and password. The server
+		  will handle the authentication of the user by querying the database. The payment page will display the items that the 
+		  user has added and the total bill. It will also provide options for the user to increment/decrement/remove the item. 
+		  We will use Stripe API to process payments and update the ledger stored in our database. For the admin interface, we 
+		  will provide a dashboard, an administrator account page, and a content manager. In the performance dashboard, it will 
+		  display the total number of orders and sales statistics. In the administrator account page, we will allow the 
+		  administrator to add/update/delete administrator profiles. In the content manager, administrators can add/update/delete
+		   the product catalogue.
+		<br>
+		<br>
+		Back-end Functionality: 
+		<ul>
+		 <li>- Creating scripts</li> 
+		 <li>- Dashboard for visualization product data</li>
+		 <li>- NLP chatbots </li>
+		</ul>
+		
+		</p>
+
+		<h5>Technologies:</h5>
+		<ul>
+			<li>- JavaScript</li>
+			<li>- Nodejs/React</li>
+			<li>- Bootstrap Framework</li>
+            <li>- MongoDB</li>
+            <li>- Express</li>
+            <li>- Mocha Testing</li>
+            <li>- HTML/EJS</li>
+			
+		</ul>
+
+
+		<h5>Routes and Controllers </h5>
+		<p>
+		API handling routes are divided into Admin and Shop. The admin routes consists of HTTP requests handlers for 
+		adding/retrieving/editing/deleting products on the Catalogue collections in the MongoDB. 
+		</p>
+		<div class="img-container">
+			<img src="images/mongo.png">
+		</div>
+
+		<h5>Routes</h5>
+		<p>
+			The shop routes consists of HTTP requests handlers for retrieving Products from the Catalogue collection, retrieving/deleting/updating cart objects from the User object in the User collection and retrieving/updating the orders from the Orders collection from MongoDB.
+
+		</p>
+		<div class="img-container">
+			<img src="images/mongo2.png">
+			<img src="images/mongo3.png">
+		</div>
+
+		
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quoridor</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+
+	<style type="text/css">
+		.img-container{
+			max-width: 600px;
+		}
+
+		img{
+			width: 100%
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="nav-wrapper">
+
+		<!-- Link around dots-wrapper added after tutorial video -->
+		<a href="index.html">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a href="index.html#contact">Contact</a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<br>
+
+		<div class="img-container">
+			<img src="images/quoridor.png">
+		</div>
+		
+		<h3>Quoridor Board Game</h3>
+
+		<p>This was an academic project for a software engineering course. It was done by my friends and I in September 
+			2020 until December 2020. 
+		<br>
+		<br>
+		An iterative design process of a Quoridor game clone.
+		<br>
+		<br>
+		Our plan for connecting four players involves a typical server/client relationship. One player acts as the server and 
+		accepts three opponents. AI opponents would run directly on the server host, and all human opponents would connect as 
+		clients. Login authentication and security can be layered if required.
+		Communication between server and clients would likely involve a TCP/IP connection. The server would assign an IP address
+		and port for connection. These connection details could be relayed to the other opponents via some method outside the system 
+		(email, text message, etc.). Once clients are connected, packets describing game states can be transferred between server 
+		and client.
+		At each turn, get the GameState, send it to the server, which forwards to all clients. Everybody calls BuildAssets with the 
+		latest game state. Each player is now synced, and play can continue.
+		Available Framework:
+		GameState Class: To capture the current state of the game, the GameState class has been provided to capture three pieces of 
+		data (Player currentPlayers[4], GameTile allTiles[rows][cols], and int nextToPlay). All games can be reconstructed from 
+		their GameState using BuildAssets.				
+		<br>
+		<br>
+		BuildAssets: This factory class takes the pertinent information for starting/resuming a game and can use it to construct 
+		a game board and in-game UI, allowing play to resume. Using existing images and assets, BuildAssets can finish in a fraction
+		 of a second, with no visible lag or interruptions in the display.	
+		<br>
+		<br>
+		I worked on this game for 4 months.</p>
+
+		<h5>Technologies:</h5>
+		<ul>
+			<li>- Java/JavaScript</li>
+			<li>- Networking Document</li>
+			<li>- JUnit Testing</li>
+			
+		</ul>
+
+
+		<h5>New Game</h5>
+		<div class="img-container">
+			<img src="images/new game.png">
+		</div>
+
+		<h6>Instructions</h5>
+		<div class="img-container">
+			<img src="images/instructions.png">
+			<img src="images/instructions2.png">
+		</div>
+
+		<h5>Board</h5>
+		<div class="img-container">
+			<img src="images/board.png">
+		</div>
+
+		<h5>Load Game</h5>
+		<div class="img-container">
+			<img src="images/load game.png">
+		</div>
+
+		<h5>JUnit Testing</h5>
+		<div class="img-container">
+			<img src="images/FactorsTestingScreenshot.png">
+		</div>
+
+	</div>
+
+</body>
+</html>
